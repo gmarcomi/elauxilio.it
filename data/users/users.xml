@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<utenti xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="users.xsd">
+  <utente admin="si">
+    <username>admin</username>
+    <nome>Gabriele</nome>
+    <cognome>Marcomin</cognome>
+    <iscrizione>
+      <ora>15:29:19</ora>
+      <data>2015-12-26</data>
+    </iscrizione>
+    <password>827d28f361e06e09bbe88d7b2c80fe19f82e760a42a8131cd4b00560884394a8</password>
+  </utente>
+<utente admin="no">
+               <username>pucci</username>
+               <nome>Federica</nome>
+               <cognome>Pucci</cognome>
+               <iscrizione>
+                 <ora>15:43:00</ora>
+                 <data>2016-06-30</data>
+               </iscrizione>
+               <password>759b02d866c1bf7a815ea17f01c74d0c683cde932d3ec586a13b41451027bf64</password>
+             </utente></utenti>

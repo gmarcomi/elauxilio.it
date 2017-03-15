@@ -1,0 +1,175 @@
+@media handheld, screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+  body {
+    font-size: 82%;
+    background-color: #e6e4e2;
+  }
+
+  /* garantisco l'uso di h* per l'inizio di un nuovo paragrafo */
+  h1,
+  h2 {
+    margin-top: 1.5%;
+    margin-bottom: 2.5%;
+  }
+
+  /* contenitore principale, contiene barra di navigazione, login e contenuto del sito */
+
+  #main {
+    width: auto;
+    margin: 0;
+    border: none;
+    background-color: #e6e4e2;
+  }
+
+  /* Stile dell'header */
+  .fixed {
+    position: fixed;
+    top: 0;
+  }
+  #header {
+    width: 100%;
+    height: 52px;
+  }
+  #btn-responsive-menu {
+    display: block;
+    float: right;
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    margin: 8px 4% 8px 0;
+    cursor: pointer;
+    background-color: #333;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+  .icon-bar {
+    display: block;
+    width: 18px;
+    height: 2px;
+    margin: 5px;
+    background-color: #f5f5f5;
+  }
+  .accessbutton {
+    display: none !important;
+  }
+  #header #logo {
+    display: none;
+  }
+  #header #title {
+    margin-left: 10px;
+  }
+  #header #title h1 {
+    font-size: 30px;
+    margin: 8px 0 8px 4px;
+  }
+  #header #title h2 {
+    display: none;
+  }
+
+  /* Stile della barra di navigazione */
+  #main #bar {
+    width: 96%;
+    display: none;
+    padding: 1% 2%;
+  }
+  #main #bar ul {
+    width: 100%;
+    padding: 0;
+  }
+  #main #bar li.user,
+  #main #bar li.sub,
+  #main #bar li.evd,
+  #main #bar li a {
+    padding: 0.4em 0 0.4em 0.16em;
+    width: 100%;
+    margin: 0;
+  }
+  #main #bar li a:hover {
+    padding-bottom: 0.4em;
+  }
+  #main #bar input.button {
+    width: 98%;
+    margin-left: 1%;
+  }
+  #main .accessmenu {
+    display: block !important;
+  }
+  .show {
+    display: block !important;
+    position: fixed;
+    top: 60px;
+    background-color: #e6e4e2;
+  }
+
+  /* oggetto padding per la corretta visualizzazione del contenuto dopo menu fisso */
+  #main .do {
+    display: block !important;
+    width: 100%;
+    height: 60px;
+  }
+
+  /* Stile del contenuto del sito */
+  #main #content {
+    margin: 0;
+    width: 96%;
+    padding: 0 2%;
+  }
+
+  /* Stile per la posizione */
+
+  #main #content #position {
+    width: auto;
+    margin-left: 0;
+  }
+
+  /* stile corpo testo */
+  #main #content #data {
+    width: 98%;
+    margin: 1%;
+  }
+
+  /* classi comuni in data */
+  #main #content #data img {
+    width: 100%;
+    margin: 2% 0;
+  }
+
+  /* Stile comune liste nei form */
+  #main #data form fieldset {
+    width: auto;
+  }
+
+  /* Stile degli articoli */
+  #main #data .article .sub {
+    margin: 1.8% auto;
+  }
+
+  /* stile dei answers */
+  #main #data #answers {
+    margin-top: 2.8%;
+  }
+  #main #data #answers .grane {
+    margin-bottom: 4.6%;
+    margin-top: 2.4%;
+  }
+  #main #data dl.guide dt {
+    margin-top: 4.54%;
+  }
+
+  /* stile form commenti */
+  #main #data form#insertComment {
+    margin-top: 2%;
+    margin-bottom: 3.5%;
+  }
+
+  /* stile box answer */
+  #main #data .answer {
+    width: auto;
+  }
+
+  /* stile footer */
+  #main #footer {
+    width: auto;
+    margin: 0;
+  }
+}

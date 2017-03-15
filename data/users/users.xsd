@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+
+  <xs:element name="utenti" type="Users" />
+
+  <xs:complexType name="Users">
+    <xs:sequence>
+	  <xs:element name="utente" type="User" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element name="username" type="Username" />
+      <xs:element name="nome" type="Name" />
+      <xs:element name="cognome" type="Surname" />
+      <xs:element name="iscrizione" type="Subscription" />
+      <xs:element name="password" type="Password" />
+    </xs:sequence>
+    <xs:attribute name="admin" type="xs:string" default="no" />
+  </xs:complexType>
+
+  <xs:simpleType name="Username">
+    <xs:restriction base="xs:string">
+     <xs:minLength value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Name">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z][a-zA-Z]*" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Surname">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-z]+([ '-][a-zA-Z]+)*" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="Subscription">
+    <xs:sequence>
+	  <xs:element name="ora" type="xs:time" />
+      <xs:element name="data" type="xs:date" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="Password">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

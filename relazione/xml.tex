@@ -1,0 +1,13 @@
+\subsection{XML}
+I motivi per cui è stato preferito XMLSchema a DTD, come linguaggio per descrivere la struttura dei file XML, va a ricercarsi nella maggiore espressività di XSD rispetto a quella di DTD, la possibilità di definire tipo e la possibilità di utilizzare nativamente namespace. Non sono stati utilizzati namespace in quanto ritenuti non assolutamente necessari; decisione motivata dalla non presenza di schemi diversi da quelli definiti, come schemi esterni.\\
+Il sito possiede due file xml: users.xml e auxils.xml.
+Il primo file contiene le varie informazioni degli utenti di Auxils.it, mentre auxils.xml contiene le varie informazioni delle notizie all'interno del sito, informazioni come titolo, descrizione, autore, data di creazione e commenti degli utenti.\\
+Tutti i file xml e il relativo schema sono stati testati mediante W3C XML Schema (XSD) Validation online.
+
+\subsubsection{Attributi}
+
+Gli attributi sono stati usati solamente per discriminare gli utenti admin da quelli normali.
+Alcune caratteristiche inizialmente pensate come attributi, come topic, sono state definite mediante l'uso di elementi, in quanto è sicuramente più estendibile e offre maggiori possibilità di definizione di un tipo.
+
+\subsubsection{Modello adottato}
+Il modello adottato è stato quello delle Tende veneziane, in quanto sono stati considerati flessibilità di namespacing e riusabilità fattori di primaria importanza.\\

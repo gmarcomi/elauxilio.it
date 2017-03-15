@@ -1,0 +1,51 @@
+\section{Analisi degli utenti di Auxils.it}
+Gli utenti di www.auxils.it possono essere di tre tipi:
+\begin{itemize}
+ \item l'utente generico;
+ \item l'utente autenticato;
+ \item l'utente admin.
+\end{itemize}
+
+Il sito offre feature comuni a tutte le categorie di utenti, e alcune esclusive in base al tipo di utente.
+
+\subsection{Utente generico}
+
+Ogni utente può accedere alle notizie pubblicate all'interno del sito. La home visualizza i link alle suddette notizie oltre a contenere la descrizione, l'autore dell'articolo, la data di inserimento della notizia ed il numero dei commenti lasciati dai vari utenti autenticati. I link alle notizie sono strutturati seguenti lo schema cronologico, ordinate dalla più recente alla più vecchia.
+Visto il numero sempre crescente di notizie inserite, i link alle notizie sono stati strutturate su più "pagine"; non si tratta di pagine fisiche, in quanto gestite dai script perl prelevando dalla query string il numero della pagina desiderata.
+Ogni pagina quindi contiene i link per passare pagina ed eventualmente tornare alla precedente.\\
+Ogni utente può reperire informazioni riguardo al team di Auxils.it accedendo alla pagina Chi siamo.
+
+\subsection{Utente autenticato}
+
+\paragraph{Visualizzazione area utente}
+In questa sezione, l'utente ha la possibilità di vedere i propri dati, ovvero:
+\begin{itemize}
+	\item Username;
+	\item Nome;
+	\item Cognome;
+	\item Data di iscrizione.
+\end{itemize}
+\paragraph{Inserimento commenti}
+Ogni notizia garantisce a qualsiasi utente di visualizzare i primi dieci commenti o tutti i commenti lasciati dai vari utenti dal sito; l'inserimento può essere fatto esclusivamente da un utente autenticato. Nel caso in cui un utente inserisca un commento vuoto, il sistema provvederà ad avvisarlo, invitandolo a scriverne uno non vuoto.
+\paragraph{Modifica password}
+L'utente autenticato ha la possibilità di modificare la propria password; la suddetta feature può essere acceduta attraverso l'area utente cliccando sul link che indirizza alla pagina Modifica password. Il form per la modifica chiede in input la password attuale, la nuova password e la conferma della nuova password. In caso di eventuali errori, come password attuale errata o nuova password non conforme ai requisiti di lunghezza verranno segnalati dal sistema all'utente.
+
+\subsection{Utente admin}
+La pagina di autenticazione per l'utente admin è la medesima dell'utente normale, sarà poi il sistema a riconoscerlo come tale.\\
+L'utente admin ha la possibilità di eliminare un commento ritenuto non adatto al sito, offensivo o generatore di flame.
+Altri compiti importanti dell'utente admin, anche se il sito non provvede una interfaccia che facilita tali operazioni(che dovranno essere fatte a mano), sono la redazione di notizie e l'inserimento delle informazioni per il reperimento di queste ultime, le quali verranno stampate sulla home in quanto sono gli unici a poterlo fare.
+\subsection{Credenziali d'accesso delle varie tipologie di utenti}
+La seguente tabella mostrerà la username e la password di accesso di un utente per tipologia.
+\begin{small}
+\begin{longtable}{|p{5.25cm}|p{5.25cm}|}
+\hline
+\textbf{Username admin} & admin \\
+\hline
+\textbf{Password admin} & admin25 \\
+\hline
+\textbf{Username utente} & pucci \\
+\hline
+\textbf{Password utente} & pucci \\
+\hline
+\end{longtable}
+\end{small}

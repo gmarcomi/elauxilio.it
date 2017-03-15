@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="../js/lib/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/www/menu.js"></script>
+    <script type="text/javascript" src="../js/lib/jquery.validate.js"></script>
+    <script type="text/javascript" src="../js/www/formlib.js"></script>
+    <script type="text/javascript" src="../js/www/register.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/screen.css" media="handheld, screen" />
+    <link type="text/css" rel="stylesheet" href="../css/handheld.css" media="handheld, screen and (max-width:480px), only screen and (max-device-width:480px)" />
+    <link type="text/css" rel="stylesheet" href="../css/print.css" media="print" />
+    <meta name="language" content="italian it" />
+    <title>Registrazione | Auxils.it</title>
+    <meta name="title" content="Registrazione | Auxils.it" />
+    <meta name="author" content="Gabriele Marcomin" />
+    <meta name="description" content="Pagina di registrazione utente del sito auxils.it" />
+    <meta name="keywords" content="registrazione,auxils,open,source" />
+  </head>
+  <body>
+    <div id="header">
+      <div id="logo">
+        <img src="../images/logo.png"  alt="Logo del sito" />
+      </div>
+      <div id="title">
+        <h1>Auxils.it</h1>
+        <h2>News dal mondo <span lang="en">Open Source</span></h2>
+      </div>
+      <div id="btn-responsive-menu" class="accessbutton">
+        <div class="icon-bar"></div>
+        <div class="icon-bar"></div>
+        <div class="icon-bar"></div>
+      </div>
+    </div>
+    <div id="main">
+      <div id="bar" class="accessmenu">
+        <ul>
+          <li><a href="index.cgi" lang="en">Home</a></li>
+          <li><a href="info.cgi">Info</a></li>
+          <tmpl_var name="login">
+       </ul>
+      </div>
+      <div class="padding"></div>
+      <div id="content">
+      <div id="position"><a href="index.cgi" lang="en">Home</a> &gt; Registrazione</div>
+      <div id="data">
+        <h3>Registrazione</h3>
+        <p>Completa il <span lang="en">form</span> inserendo i suoi dati.</p>
+        <div class="notify">
+          <tmpl_var name="info">
+        </div>
+        <form id="form_ins" method="post" action="registrazione.cgi">
+          <fieldset>
+            <legend>Credenziali di accesso</legend>
+            <ul>
+              <li><label for="username"><span lang="en">Username *</span></label></li>
+              <li><input class="field" type="text" name="username" id="username" value="<tmpl_var username escape=html>" size="16"/></li>
+              <li><label for="password"><span lang="en">Password</span> *</label></li>
+              <li><input class="field" type="password" name="password" id="password" value="" size="16" /></li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Dati personali</legend>
+            <ul>
+              <li><label for="name">Nome *</label></li>
+              <li><input class="field" type="text" name="name" id="name" value="<tmpl_var name escape=html>" /></li>
+              <li><label for="last">Cognome *</label></li>
+              <li><input class="field" type="text" name="last" id="last" value="<tmpl_var last escape=html>" /></li>
+            </ul>
+          </fieldset>
+          <fieldset class="buttons">
+            <legend>Bottoni</legend>
+            <input type="submit" class="button" value="Procedi" />
+            <input type="hidden" name="submitted" id="submitted" value="1" />
+            <input type="reset" class="button" value="Annulla" />
+          </fieldset>
+        </form>
+      </div>
+      </div>
+      <tmpl_var name="footer">
+    </div>
+  </body>
+</html>

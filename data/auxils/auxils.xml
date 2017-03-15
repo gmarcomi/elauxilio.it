@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<auxils xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="auxils.xsd">
+    <auxil>
+      <id>stylelint-a-caccia-errori-css</id>
+      <titolo>enstartStylelintenend: a caccia di errori css</titolo>
+      <descrizione>Stylelint è un CSS enstartlinterenend, cioè uno strumento che potrà essere utilizzato per
+      analizzare il codice dei nostri fogli di stile verificandone la correttezza.
+      Sostanzialmente esso si basa su delle regole che permettono di identificare criticità nella stilizzazione, problematiche legate
+      alla manutenibilità del sorgente e...
+      </descrizione>
+      <autore>admin</autore>
+      <data>2016-05-28T10:00:00</data>
+      <topic>sviluppo</topic>
+      <risposte>
+
+<risposta>
+ <testo>prova</testo>
+ <autore>admin</autore>
+ <data>2016-06-20T16:12:34</data>
+</risposta></risposte>
+    </auxil>
+    <auxil>
+      <id>gnome-3.22-ecco-nuovo-control-center</id>
+      <titolo>Ecco il nuovo enstartGNOME Control Centerenend</titolo>
+      <descrizione>enstartGNOME Control Centerenend avrà un nuovo look su GNOME 3.22.
+      Il team di sviluppo ha infatti pubblicato un nuovo screenshot che...
+      </descrizione>
+      <autore>admin</autore>
+      <data>2016-05-27T16:00:00</data>
+      <topic>sviluppo</topic>
+      <risposte>
+      </risposte>
+    </auxil>
+    <auxil>
+      <id>fedy-cambia-dominio</id>
+      <titolo>enstartFedyenend cambia dominio</titolo>
+      <descrizione>Gli utenti Fedora di certo conosceranno enstartFedyenend, un piccolo ma potente tool che ci consente, con pochi semplici click, di installare codecs multimediali
+      e software aggiuntivo come il supporto agli...
+      </descrizione>
+      <autore>admin</autore>
+      <data>2016-04-03T11:22:02</data>
+      <topic>distro</topic>
+      <risposte>
+      </risposte>
+    </auxil>
+    <auxil>
+      <id>ubuntu-allo-stand-nokia-del-mwc-2016</id>
+      <titolo>Ubuntu allo stand Nokia del MWC</titolo>
+      <descrizione>Ubuntu appare sempre dove meno te l'aspetti. Quest'oggi stavo guardando alcuni video del MWC2016 e...
+      </descrizione>
+      <autore>admin</autore>
+      <data>2016-03-08T10:30:05</data>
+      <topic>distro</topic>
+      <risposte>
+      </risposte>
+    </auxil>
+    <auxil>
+      <id>linux-Mint-rafforza-la-sicurezza</id>
+      <titolo>Linux Mint rafforza la sicurezza dei suoi siti e server</titolo>
+      <descrizione>
+        Vi ricordate il weekend nero di Linux Mint? Bene, a quanto pare la situazione in casa Mint pare essersi
+        stabilizzata e per l'occasione il team di Linux Mint ha preso alcune contromisure...
+      </descrizione>
+      <autore>admin</autore>
+      <data>2016-03-02T15:29:19</data>
+      <topic>distro</topic>
+      <risposte>
+      </risposte>
+    </auxil>
+    <auxil>
+      <id>ubuntu-15.10-guida-completare-installazione</id>
+      <titolo>Mini guida post installazione per chi si avvicina ad Ubuntu</titolo>
+      <descrizione>
+        Avete problemi con l'installazione di Ubuntu? Allora questa mini guida post
+        installazione per Ubuntu,fatta su Ubuntu 15.10, fa per voi...
+      </descrizione>
+      <autore>admin</autore>
+      <data>2016-02-12T15:29:19</data>
+      <topic>guide</topic>
+      <risposte>
+      </risposte>
+    </auxil>
+</auxils>

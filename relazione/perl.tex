@@ -1,0 +1,46 @@
+\subsection{Perl}
+
+Gli script in perl/cgi si occupano essenzialmente del templating e dell'estrazione, manipolazione e popolamento dei dati da visualizzare.\\
+Il codice dei moduli è stato realizzato seguendo il paradigma della programmazione ad oggetti; in questo progetto sono stati utilizzati alcuni pattern al fine di rendere l'architettura generale più chiara e di rendere il codice più mantenibile e riusabile. L'architettura di sistema utilizzata scelta è stata l'architettura model view presenter, adattata alla realizzazione di un sito web, mentre è stato utilizzato il pattern Composite per aggiungere funzionalità ad un oggetto.\\
+Per mia decisione, l'intero sito si appoggia sui vari script cgi rendendolo totalmente dinamico, infatti index.html reindirizza direttamente alla pagina index.cgi.
+Questa scelta è stata presa per permettere la visualizzazione di una casella utente all'interno della barra di navigazione, visualizzando il nome dell'utente e il link alla area utente.\\
+
+I file perl/cgi/tmpl sono strutturati nel seguente modo:
+
+\begin{enumerate}
+  \item \texttt{model}: la cartella contiene tutti gli oggetti necessari alla rappresentazione della logica di business all'interno del sito, quindi la parte deputata al reperimento, elaborazione e modifica dei vari file xml.
+  \item \texttt{presenter}: il package contiene tutti gli oggetti necessari per la presentazione del sito(script e template);
+  \item \texttt{changePassword.pl}: script che si occupa di effettuare le corrette operazioni allo scopo di modificare la password di un utente, ricevendo dati dal form contenuto nella pagina cambio-password.cgi;
+  \item \texttt{logout.pl}: script  che si occupa di disautenticare correttamente l'utente dal sito;
+  \item \texttt{manageAnswers.pl}: si occupa di effettuare le operazione di inserimento e cancellazione dei vari commenti, questo script riceve le varie richieste di tipo post dalle varie pagine notizie del sito;
+  \item i vari script cgi delle pagine del sito, i quali utilizzano gli oggetti contenuti nei vari package, oltre ai moduli moduli CPAN. Ogni script che rappresentano pagine in cui è necessario essere autenticati prima di accedervi, effettuano un controllo della sessione, se non presente reindirizzando nella home.
+\end{enumerate}
+
+\subsubsection{Package model}
+Il package model contiene:
+\begin{itemize}
+  \item \texttt{auxils}: package contenenti gli oggetti necessari alla gestione dei dati contenuti nel file auxils.xml;
+  \item \texttt{user}: package contenenti gli oggetti necessari alla gestione dei dati contenuti nel file users.xml;
+  \item \texttt{ComFunc.pm}: libreria contenenti funzioni utilizzati da più file.
+\end{itemize}
+
+Il sottopackage auxils è composto da:
+\begin{itemize}
+  \item \texttt{Answers.pm}: oggetto utilizzato per la gestione delle risposte all'interno delle varie notizie(auxils);
+  \item \texttt{Auxil.pm}: oggetto utilizzato per la gestione delle informazioni dei vari auxils pubblicati(notizie).
+\end{itemize}
+
+Mentre il sotto package user è composto da 
+\begin{itemize}
+  \item \texttt{User.pm}: oggetto contenente metodi di tipo query per il file users.xml;
+  \item \texttt{Register.pm}: oggetto utilizzato per la corretta registrazione di un utente all'interno del sito;
+  \item \texttt{ModifyUser.pm}: oggetto utilizzato per la modifica di un utente all'interno di un sistema.
+\end{itemize}
+
+\subsubsection{Package presenter}
+Il package presenter è cosi strutturato:
+\begin{itemize}
+  \item \texttt{view}: questo package contiene i vari template. A sua volta è suddiviso in common e pages, common contiene i template innestati in altri template, mentre pages contiene i template delle varie pagine del sito;
+  \item \texttt{Presenter.pm}: oggetto utilizzato per la composizione e renderizzazione dei vari template utilizzati da una pagina;
+  \item \texttt{PresenterAnswers.pm}: oggetto container per l'oggetto Presenter, necessario alla corretta presentazione dei commenti all'interno di una notizia.
+\end{itemize}

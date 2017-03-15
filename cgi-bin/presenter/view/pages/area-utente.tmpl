@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="../js/lib/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/www/menu.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/screen.css" media="handheld, screen" />
+    <link type="text/css" rel="stylesheet" href="../css/handheld.css" media="handheld, screen and (max-width:480px), only screen and (max-device-width:480px)" />
+    <link type="text/css" rel="stylesheet" href="../css/print.css" media="print" />
+    <meta name="language" content="italian it" />
+    <title>Area utente | Auxils.it </title>
+    <meta name="title" content="Area utente | Auxils.it"/>
+    <meta name="author" content="Gabriele Marcomin" />
+    <meta name="description" content="Area utente di un utente autentica in auxils.it" />
+    <meta name="keywords" content="auxils,open,source,area,utente" />
+  </head>
+  <body>
+    <div id="header">
+      <div id="logo">
+        <img src="../images/logo.png"  alt="Logo del sito" />
+      </div>
+      <div id="title">
+        <h1>Auxils.it</h1>
+        <h2>News dal mondo <span lang="en">Open Source</span></h2>
+      </div>
+      <div id="btn-responsive-menu" class="accessbutton">
+        <div class="icon-bar"></div>
+        <div class="icon-bar"></div>
+        <div class="icon-bar"></div>
+      </div>
+    </div>
+    <div id="main">
+      <div id="bar" class="accessmenu">
+        <ul>
+          <li><a href="index.cgi" lang="en">Home</a></li>
+          <li><a href="info.cgi">Info</a></li>
+          <tmpl_var name="login">
+        </ul>
+      </div>
+      <div class="padding"></div>
+      <div id="content">
+      <div id="position"><a href="index.cgi" lang="en">Home</a> &gt; Area utente</div>
+        <div id="data">
+          <h3>Area utente</h3>
+          <table summary="Questa tabella elencherà i vari dati dell'utente loggato">
+            <caption>Dati personali</caption>
+            <tr>
+              <th scope="row">Utente</th>
+              <td><tmpl_var name="username"></td>
+            </tr>
+            <tr>
+              <th scope="row">Nome</th>
+              <td><tmpl_var name="name"></td>
+            </tr>
+            <tr>
+              <th scope="row">Cognome</th>
+              <td><tmpl_var name="last"></td>
+            </tr>
+            <tr>
+              <th scope="row">Iscrizione</th>
+              <td><tmpl_var name="iscrizione"></td>
+            </tr>
+          </table>
+          <a href="cambio-password.cgi">Cambio <span lang="en">password</span></a>
+        </div>
+      </div>
+      <tmpl_var name="footer">
+    </div>
+  </body>
+</html>

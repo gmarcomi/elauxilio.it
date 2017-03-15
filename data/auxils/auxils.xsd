@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+  <xs:element name="auxils" type="Auxils" />
+
+  <xs:complexType name="Auxils">
+    <xs:sequence>
+      <xs:element name="auxil" type="Auxil" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Auxil">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" />
+      <xs:element name="titolo" type="xs:string" />
+      <xs:element name="descrizione" type="xs:string" />
+      <xs:element name="autore" type="xs:string" />
+      <xs:element name="data" type="xs:dateTime" />
+      <xs:element name="topic" type="xs:string"/>
+      <xs:element name="risposte" type="Answers"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Answers">
+    <xs:sequence>
+      <xs:element name="risposta" type="Answer" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Answer">
+    <xs:sequence>
+      <xs:element name="testo" type="TextAnswer"/>
+      <xs:element name="autore" type="xs:string" />
+      <xs:element name="data" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="TextAnswer">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="200"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

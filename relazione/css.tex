@@ -1,0 +1,52 @@
+\section{CSS e struttura}
+In questo capitolo verranno descritte le scelte prese dal sottoscritto al fine di rendere il sito sia accessibile a tutte le categorie possibili di utenti che accattivante.\\ 
+Il tipo di layout usato per Auxils.it è stato il layout fluido eccetto in:
+\begin{itemize}
+ \item per la definizione della dimensione del testo e del padding, border e altri elementi decorativi degli elementi testo sono stati usati gli em;
+ \item nel CSS per i dispositivi con schermo più piccolo dei 480px, la dimensione dell'header e degli elementi contenuti all'interno di esso è espressa in pixel;
+ \item nel foglio di stile utilizzato per la stampa, il font è stato espresso in pt invece di essere espresso in em.
+\end{itemize} 
+Si tratta quindi di un layout ibrido ad tutti gli effetti.
+I fogli di stile sono stati tutti validati utilizzando il CSS Validator fornito dal w3c.
+\subsection{Struttura}
+Le principali sezioni che compongono Auxils.it sono header e main.
+\subsubsection{Header}
+Questa sezione contiene il logo del sito e l'eventuale pulsante per far apparire e scomparire il menu di navigazione nella versione mobile. L'immagine contenuta nell'header non sfora dal div grazie alla proprietà max-width fornita da CSS3. Tale proprietà è stata simulata su IE6 con un hack, sfruttando il fatto che width in IE6 ha un comportamento simile al max-width.
+\subsubsection{Main}
+La sezione main contiene le sezioni bar, position, content e footer.
+
+\paragraph{Bar}
+Questa sezione contiene sostanzialmente la barra di navigazione del sito. Si tratta di una barra di navigazione verticale, scelta principalmente per ovviare ad un futuro e probabile problema di un sovraffollamento di pagine principali, in una lista verticale lo spazio è gestibile meglio che in una orizzontale. La barra di navigazione contiene anche i link all'area utente, i quali sono usufruibili solo dopo aver effettuato login, senza avere fatto l'operazione di autenticazione saranno disponibili i link per autenticarsi e per effettuare la registrazione.
+
+\paragraph{Position e Content}
+Il div position contiene il breadcrumb del sito. L'uso del breadcrumb ovvia al problema del lost in navigation ovvero un grave problema alla usabilità generale del sito.\\
+La sezione content contiene invece i contenuti veri e propri presentati nelle pagine del sito.
+
+\paragraph{Footer}
+Il footer contiene la notifica di copyright dell'Auxils team e le immagini che attestano la validazione effettuata al sito.
+
+\subsection{Colori e i font}
+I colori usati nel layout si rifanno alla palette ufficiale di Ubuntu. Essendo Auxils.it un blog di notizie open source, la scelta risulta abbastanza motivata; oltretutto si tratta di una palette minimale ed elegante, la quale permette di aver un buon contrasto fra colore degli sfondi e del testo. La dimensione del font scelta unito alla particolare scelta della palette di colore permettono la corretta visualizzazione anche ad occhi semichiusi.
+\paragraph{Link}
+Per i link presenti nel content si è scelto di mantenere il colore di default per i link non visitati, mentre per i link già visitati si è optato per un arancio, stessa cosa dicasi per i link già visitati nella barra di navigazione, i quali mantengono il color grigio scuro per i link non visitati. Il colore dei link presenti nel breadcrumb è viola scuro. Menzione meritano i link usati per caricare notizie più vecchie o più recenti: anche se contenuti in content, essi hanno l'aspetto simile a quello posseduto da button presenti nel sito.
+\paragraph{Font scelto}
+Il font scelto è Droid Sans. In caso di mancato supporto, sono state fornite varie alternative, sempre con un font medesimo. Come detto in precedenza, la dimensione del font è stata espressa in em, tranne per il foglio di stile per la stampa nel quale la dimensione del font è stata definita in pt all'interno del body.
+
+\subsection{CSS3}
+L'utilizzo di comandi CSS3 è stato ridotto il più possibile. Il loro utilizzo è avvenuto solamente al fine di aggiungere alcuni dettagli grafici, che se non interpretati correttamente dal browser, non vanno a pregiudicare il layout.\\
+I comandi usati sono i seguenti:
+\begin{itemize}
+  \item max-width;
+  \item border-radius.
+\end{itemize}
+
+\subsection{L'utilizzo delle mediaquery}
+
+Per affrontare il problema della compatibilità tra le varie piattaforme sono state utilizzate delle mediaquery, le quali linkano gli opportuni file CSS, in base al tipo di device in cui vengono letti.\\
+Le mediaqueries utilizzate sono le seguenti:
+\begin{itemize}
+	\item \texttt{handheld, screen}: per schermi normali e handheld;
+	\item \texttt{handheld, screen and (max-width:480px), only screen and (max-device-width:480px)}: per schermi e handheld con schermo con larghezza minore uguale ai 480 pixel;
+	\item \texttt{print}: usata per la stampa.
+\end{itemize}
+

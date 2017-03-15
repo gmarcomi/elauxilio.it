@@ -1,0 +1,27 @@
+</ul>
+<ul>
+<li class="sub">Area riservata</li>
+ <tmpl_unless logged>
+   <tmpl_if login>
+     <li class="evd">Login</li>
+     <li><a href="registrazione.cgi">Registrati</a></li>
+   </tmpl_if>
+   <tmpl_if register>
+     <li><a href="login.cgi">Login</a></li>
+     <li class="evd">Registrati</li>
+   </tmpl_if>
+   <tmpl_if none>
+     <li><a href="login.cgi">Login</a></li>
+     <li><a href="registrazione.cgi">Registrati</a></li>
+   </tmpl_if>
+ <tmpl_else>
+   <li class="user">Utente: <tmpl_var name="username"></li>
+   <tmpl_unless area>
+    <li><a href="area-utente.cgi">Area utente</a></li>
+   <tmpl_else>
+    <li class="evd">Area utente</li>
+   </tmpl_unless>
+   <li><form method="post" action="logout.pl">
+    <p><input class="button" type="submit" value="Logout" /></p>
+   </form></li>
+ </tmpl_unless>

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="../js/lib/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/www/menu.js"></script>
+    <meta name="language" content="italian it" />
+    <link type="text/css" rel="stylesheet" href="../css/screen.css" media="handheld, screen" />
+    <link type="text/css" rel="stylesheet" href="../css/handheld.css" media="handheld, screen and (max-width:480px), only screen and (max-device-width:480px)" />
+    <link type="text/css" rel="stylesheet" href="../css/print.css" media="print" />
+    <title>Mini guida post installazione per chi si avvicina ad Ubuntu | Auxils.it</title>
+    <meta name="title" content="Mini guida post installazione per chi si avvicina ad Ubuntu | Auxils.it"/>
+    <meta name="author" content="Gabriele Marcomin" />
+    <meta name="description" content="tutorial post installazione per Ubuntu 15.10" />
+    <meta name="keywords" content="auxils,linux,guida,tutorial,ubuntu,post installazione" />
+  </head>
+  <body>
+    <div id="header">
+      <div id="logo">
+        <img src="../images/logo.png"  alt="Logo del sito" />
+      </div>
+      <div id="title">
+        <h1>Auxils.it</h1>
+        <h2>News dal mondo <span lang="en">Open Source</span></h2>
+      </div>
+      <div id="btn-responsive-menu" class="accessbutton">
+        <div class="icon-bar"></div>
+        <div class="icon-bar"></div>
+        <div class="icon-bar"></div>
+      </div>
+    </div>
+    <div id="main">
+    <div id="bar" class="accessmenu">
+      <ul>
+        <li><a href="index.cgi" lang="en">Home</a></li>
+        <li><a href="info.cgi">Info</a></li>
+        <tmpl_var name="login">
+      </ul>
+    </div>
+      <div class="padding"></div>
+      <div id="content">
+        <div id="position"><a href="index.cgi" lang="en">Home</a> &gt; Mini guida post installazione per chi si avvicina ad Ubuntu</div>
+        <div id="data">
+          <h3>Mini guida post installazione per chi si avvicina ad Ubuntu</h3>
+          <p id="desc">Avete problemi con l'installazione di Ubuntu? Allora questa mini guida post
+          installazione per Ubuntu,fatta su Ubuntu 15.10, fa per voi.</p>
+          <dl class="guide">
+            <dt>Abilitare i repository Partner di Canonical e aggiornare il sistema</dt>
+            <dd><p>Andiamo ad abilitare i repository Partner di Canonical che ci serviranno per installare programmi come <span lang="en">Skype</span>.</p>
+                <p>Andiamo nelle impostazioni di sistema e clicchiamo sull'icona Software e aggiornamenti. Andiamo ora ad Altro Software e spuntiamo la voce Partner di Canonical. Successivamente chiudiamo ora il tutto e andiamo ad aggiornare il sistema; quindi lanciamo il terminale e diamo:</p>
+                <p class="command">sudo apt-get update &amp;&amp; sudo apt-get upgrade</p>
+            </dd>
+            <dt>Installazione <span lang="en">codec</span>, font <span lang="en">Microsoft</span>, <span lang="en">Adobe Flash Player</span>, <span lang="en">OpenJDK</span> e il <span lang="en">plugin</span> per il browser</dt>
+            <dd><p>Andiamo ora ad installare i vari <span lang="en">codec</span> multimediali, supporto ai file compressi, font <span lang="en">Microsoft</span> e <span lang="en">Adobe Flash Player</span>. Possiamo farlo installando un solo pacchetto che provvederà a fare tutto da se. Da terminale digitiamo: </p>
+                <p class="command">sudo apt-get install ubuntu-restricted-extras p7zip</p>
+                <p>Durante l'installazione apparirà la richiesta di accettare l'installazione dei caratteri <span lang="en">Microsoft</span>. Spostatevi con i tasti freccia e confermate le operazioni.</p>
+                <p>Andiamo ora ad installare <span lang="en">OpenJDK</span> e il <span lang="en">plugin</span> per il browser dando da terminale:</p>
+                <p class="command">sudo apt-get install openjdk-7-jre icedtea-7-<span lang="en">plugin</span></p>
+                <p>In alternativa potrete installare la versione 8 dando</p>
+                <p class="command">sudo apt-get install openjdk-8-jre</p>
+            </dd>
+            <dt>Ufficio</dt>
+            <dd><p>Su Ubuntu 15.10 abbiamo già quasi tutto quello che ci serve per realizzare e visualizzare documenti grazie a LibreOffice in versione quasi completa (manca come sempre LibreOffice Base che quasi nessuno usa). Se avete intenzione di usare LibreOffice Base vi basterà installarlo dando da terminale: </p><p class="command">sudo apt-get install libreoffice-base</p>
+                <p>Coloro di voi che fanno largo uso di epub possono trovare in Calibre un ottimo compagno. Questo programma consente di interfacciare il vostro lettore ebook con il PC ma anche il vostro device android e sincronizzare il vostro database.  Possiamo installare Calibre dando da terminale</p>
+                <p class="command">sudo apt-get install calibre</p>
+            </dd>
+            <dt><span lang="en">Utility varie</span></dt>
+            <dd><p>L'installazione di tutti i pacchetti deb su Ubuntu passa per l'Ubuntu <span lang="en">Software Center</span> che però è considerato da molti un vero macigno. Per questi motivi vi consiglio l'installazione del buon vecchio <span class="emph">gdebi</span> dando</p>
+                <p class="command">sudo apt-get install gdebi</p>
+                <p>Consiglio di installare anche un altro programma ovvero il gestore pacchetti <span class="emph" lang="en">Synaptic</span> che può tornare sempre utile. Da terminale diamo:</p>
+                <p class="command">sudo apt-get install synaptic</p>
+                <p>Nel caso in cui vi dilettiate con la compilazione di programmi è utile installare <span lang="en">build-essential</span>, un meta pacchetto che vi andrà ad installare il minimo sindacale per la compilazione. Potete farlo dando da terminale</p>
+                <p class="command">sudo apt-get install build-essential </p>
+            </dd>
+            <dt>Completare l'installazione della lingua italiana</dt>
+            <dd><p>Se avete installato Ubuntu 15.04 mentre eravate collegati alla vostra rete domestica vi ritroverete già la lingua italiana installata. In caso contrario potete installare la lingua italiana dando da terminale:</p>
+                <p class="command">sudo apt-get install language-pack-it language-pack-gnome-it aspell-it myspell-it witalian</p>
+            </dd>
+          </dl>
+          <tmpl_var name="answers">
+        </div>
+      </div>
+      <tmpl_var name="footer">
+    </div>
+  </body>
+</html>

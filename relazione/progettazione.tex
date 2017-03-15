@@ -1,0 +1,17 @@
+\section{Progettazione}
+Tutte le fasi di progettazione e codifica sono state eseguite per garantire la più assoluta separazione tra contenuto, presentazione e comportamento. Questo comportamento ha portato considerevoli vantaggi in termini di manutenibilità e leggibilità del codice.\\
+Gli script javascript non sono invasi, in quanto le feature fornite da quest'ultimi sono garantiti dagli script perl, nel caso in cui javascript sia disattivato. Gli script sono stati realizzati per aumentare l'usabilità generale di sito, infatti sono stati utilizzati solo per validare form e migliorare l'usabilità dell'interfaccia mobile.\\
+Il sito web in questione è stato realizzato usando lo standard XHTML 1.0 Strict, in quanto il fatto di essere standard ha reso il sito sicuramente più accessibile di quanto sarebbe stato se fosse stato realizzato con HTML 5.\\
+Il database, come da specifica, è stato realizzato con XML e ciascun file ha associato un relativo schema definito tramite XMLSchema.\\
+Ogni pagina è stata realizzata tramite script lato server Perl/CGI, questo perché il link all'area utente e il pulsante di logout sono stati resi accessibili da ogni pagina del sito.
+
+Lo scaffolding del progetto è il seguente:
+
+\begin{itemize}
+
+	\item \texttt{public-html}: risiedono la home index.html che rimanda alla pagina index.cgi, i vari fogli di stile CSS, gli script javascript(comprese le necessarie librerie) e le immagini;
+	\item \texttt{cgi-bin}: risiedono tutti gli script Perl/CGI e i file di template da popolare;
+	\item \texttt{data}: risiedono tutti i file XML e i loro schemi associati;
+	\item \texttt{relazione}: in cui risiede il pdf della relazione.
+
+\end{itemize}

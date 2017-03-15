@@ -1,0 +1,469 @@
+@media handheld, screen {
+  body {
+    font-family: "Droid Sans", Verdana, "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+    font-size: 84%;
+    background-color: #f9f9f9;
+    margin: 0;
+  }
+
+  /* garantisco l'uso di h* per l'inizio di un nuovo paragrafo */
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-top: 2%;
+    margin-bottom: 3%;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 1.92em;
+  }
+  h4 {
+    font-size: 1.52em;
+  }
+
+  /* Classi comuni */
+  input.button {
+    color: #fff;
+    padding: 0.3em 0.2em;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #333;
+    border: 0.1em solid #5d5d5a;
+  }
+  input.field {
+    width: 76%;
+    margin-bottom: 1%;
+    border: 0.14em solid #aea79f;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+  }
+  fieldset {
+    border: none;
+    margin: 0;
+    display: block;
+    padding: 0;
+  }
+  legend {
+    display: none;
+  }
+  img {
+    border: 0;
+  }
+  a:visited {
+    color: #e95420;
+  }
+
+  /* Stile dell'header */
+  #header {
+    overflow: hidden;
+    background-color: #77216f;
+    padding: 1% 0;
+    width: 100%;
+  }
+  #header #logo {
+    float: left;
+    width: 13.76%;
+    margin-left: 4%;
+    padding: 0 1.12%;
+    display: inline; /* Per bug doppio margine di ie6 */
+  }
+  #header #logo img {
+    width: 86%;
+  }
+  #header #title {
+    float: left;
+    color: white;
+    width: auto;
+    padding-left: 2%;
+  }
+  #header #title h1 {
+    font-size: 2.5em;
+    font-variant: small-caps;
+    margin: 0;
+  }
+  #header #title h2 {
+    font-style: oblique;
+    font-size: 1.2em;
+    display: inline;
+  }
+  #btn-responsive-menu {
+    display: none;
+  }
+
+  /* contenitore principale, contiene barra di navigazione, login e contenuto del sito */
+  #main {
+    clear: left;
+    width: auto;
+    height: 100%;
+    margin: 0.5% 4% 0;
+    overflow: hidden;
+    background-color: #e6e4e2;
+    color: #383838;
+    border: 1.4px solid #d6d3cf;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+  }
+
+  /* Stile della barra laterale, contenente login e menu verticale */
+  #main #bar {
+    width: 18%;
+    color: #4f4f4f;
+    float: left;
+    padding-top: 1.1%;
+  }
+
+  #main #bar ul {
+    list-style: none;
+    width: 92%;
+    margin: auto;
+    padding: 0;
+  }
+
+  #main #bar li.user {
+    padding: 0.48em 0.12em;
+    width: 100%;
+
+  }
+
+  #main #bar li.sub {
+    padding: 0.48em 0.12em;
+    width: 100%;
+    font-weight: 600;
+    margin-top: 0.6em;
+  }
+
+  #main #bar li.evd {
+    padding: 0.48em 0.12em;
+    background-color: #77216f;
+    color: #fff;
+    width: 100%;
+    font-weight: 400;
+  }
+
+  #main #bar li a {
+    border-bottom: 0.14em solid #c6c1bb;
+    padding: 0.48em 0.12em;
+    display: block;
+    color: #4f4f4f;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  #main #bar ul li:last-child a {
+    border-bottom: none;
+  }
+
+  #main #bar li a:visited {
+    color: #e95420;
+  }
+
+  #main #bar li a:hover {
+    background-color: #f15d22;
+    color: #fff;
+    padding-bottom: 0.48em;
+  }
+
+  #main #bar input.button {
+    width: 100%;
+  }
+
+  #main .padding {
+    display: none;
+  }
+
+  /* Stile del contenuto del sito */
+  #main #content {
+    float: left;
+    width: 82%;
+    background-color: #fff;
+    padding-top: 1%;
+    padding-bottom: 2.4%;
+    margin-bottom: 1.4%;
+  }
+
+  /* Stile per la posizione */
+
+  #main #content #position {
+    width: 92%;
+    margin-left: 2%;
+    font-size: 1.02em;
+    padding: 0.9% 0;
+  }
+
+  #main #content #position a {
+    color: #2c001e;
+    text-decoration: none;
+    padding-bottom: 0.16em;
+    font-weight: 600;
+    border-bottom: 1.2px solid #806678;
+  }
+
+  #main #content #position a:hover {
+    border-bottom-color: #2c001e;
+  }
+
+  /* stile corpo testo */
+  #main #content #data {
+    width: 96%;
+    text-align: justify;
+    margin: 1% 2%;
+  }
+
+  /* classi comuni in data */
+  #main #content #data img {
+    width: 60%;
+    margin: 2% 20%;
+  }
+
+  #main #data p {
+    line-height: 18px;
+    margin: 0;
+  }
+
+  #main #data .change {
+    color: #fff;
+    padding: 0.3em 0.2em;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #333;
+    text-decoration: none;
+    border: 0.1em solid #5d5d5a;
+    margin-right: 1.3%;
+  }
+
+  /* Stile comune liste nei form */
+  #main #data form {
+    margin-top: 1.4%;
+  }
+  #main #data form fieldset {
+    width: 38%;
+    margin-bottom: 1%;
+  }
+
+  #main #data form ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #main #data form ul li {
+    margin-top: 1.4%;
+  }
+
+  /* stili per messaggi d'errore */
+  #main #data form label.error {
+    color: #fb3a3a;
+    display: block;
+    margin: 0.8% 0;
+    padding: 0;
+  }
+
+  #main #data div.notify {
+    margin: 2.3% 0;
+    padding-left: 1%;
+    font-weight: 600;
+    font-size: 1.02em;
+    color: #fb3a3a;
+  }
+
+  /* Stile auxils */
+  #main #data .article {
+    border: 0.1em solid #b8b8b6;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 1% 2%;
+    margin: 1.4% 0 3%;
+    width: auto;
+    background-color: #fbfbfb;
+  }
+
+  #main #data .article .title {
+    font-weight: 400;
+    font-size: 1.24em;
+    text-transform: uppercase;
+  }
+
+  #main #data .article .sub {
+    margin-top: 1.2%;
+    font-size: 0.9em;
+  }
+
+  #main #data .article .sub .author {
+    margin-right: 0.5em;
+    color: #333;
+    font-weight: 600;
+  }
+
+  #main #data .article .sub .datetime {
+    margin: 0 0.22em;
+    font-size: 1.03em;
+    color: #4f4f4f;
+  }
+
+  #main #data .article .sub .nanswers {
+    margin-left: 0.5em;
+  }
+
+  #main #data .article .desc {
+    margin-top: 1.1%;
+  }
+
+  #main #data input.button {
+    margin-right: 2%;
+  }
+
+  #main #data input.button:last-child {
+    margin-right: 0;
+  }
+
+  /* stile per la tabella */
+  #main #data table {
+    margin-bottom: 2.4%;
+    border-collapse: collapse;
+    border: 0.1em solid #b8b8b6;
+  }
+
+  #main #data table caption {
+    font-weight: 600;
+    font-size: 1.06em;
+    margin: 2% 0 1.5%;
+    text-align: left;
+  }
+
+  #main #data table th {
+    font-weight: 700;
+    padding: 0.68em;
+    color: #fff;
+    background-color: #e36c43;
+    text-align: left;
+  }
+
+  #main #data table th,
+  #main #data table td {
+    border: 0.1em solid #b8b8b6;
+    padding: 0.4em;
+  }
+
+  /* stile dei answers */
+
+  #main #data #answers {
+    padding: 1% 2%;
+    margin-top: 3.2%;
+    width: auto;
+    background-color: #f6f6f5;
+  }
+  #main #data #answers .grane {
+    margin-bottom: 4.8%;
+    margin-top: 3%;
+  }
+  #main #data #flag {
+    margin: 2% 0;
+  }
+  #main #data #flag ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+  }
+  #main #data #flag ul li {
+    display: inline;
+  }
+  #main #data #flag ul li a {
+    color: #50504e;
+    text-decoration: none;
+    margin-right: 0.49em;
+  }
+  #main #data #flag ul li.evid {
+    color: #333;
+    padding-bottom: 0.48em;
+    margin-right: 0.49em;
+    border-bottom: 0.14em solid #333;
+  }
+
+  /* stile form commenti */
+  #main #data form#insertComment {
+    margin-top: 2.5%;
+    margin-bottom: 4%;
+  }
+  #main #data form#insertComment textarea {
+    border: 0.14em solid #bcbcba;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+    width: 90%;
+    margin-bottom: 0.8%;
+  }
+  #main #data form#insertComment label {
+    display: none;
+  }
+
+  /* stile box answer */
+  #main #data .answer {
+    margin: 1% 0% 1.4%;
+    padding: 1%;
+    width: 56%;
+  }
+  #main #data .answer .title {
+    font-size: 0.98em;
+    margin-bottom: 1.4%;
+  }
+  #main #data .answer .title .username {
+    color: #337ab7;
+    font-size: 1.06em;
+    font-weight: 600;
+  }
+  #main #data .answer .title .hour,
+  #main #data .answer .title .data {
+    font-weight: 400;
+    color: #77216f;
+  }
+  #main #data .answer .text {
+    padding: 1%;
+    font-size: 1.04em;
+    margin-bottom: 1.4%;
+  }
+
+  /* stile liste */
+  #main #data dl.guide {
+    margin: 3% 0% 7%;
+  }
+  #main #data dl.guide dt {
+    font-size: 1.468em;
+    font-weight: 400;
+    margin-bottom: 2.8%;
+    margin-top: 4%;
+  }
+  #main #data p.command {
+    font-weight: 600;
+    font-size: 0.88em;
+    margin: 1.9%  0 1.9% 3.4%;
+  }
+  #main #data dl.guide dd {
+    margin-left: 0;
+  }
+
+  /* stile footer */
+  #main #footer {
+    clear: both;
+    color: #666;
+    width: 100%;
+    margin-top: 1%;
+    text-align: center;
+  }
+  #main #footer p {
+    margin: 1.2% auto;
+  }
+  #main #footer a {
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  #main #footer a img {
+    width: 80px;
+  }
+}

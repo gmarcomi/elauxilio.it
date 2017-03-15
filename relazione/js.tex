@@ -1,0 +1,18 @@
+\subsection{Javascript}
+Sono stati realizzati alcuni script Javascript al fine di aumentare l'usabilità generale del sito. Si trattano di script non invasivi in quanto offrono alternative a feature offerte già dagli script perl/cgi e dai fogli css presenti, qualora il motore Javascript fosse disattivato dalle impostazioni del browser.\\
+La programmazione è stata fatta usando il più possibile la programmazione ad oggetti fornita da javascript con un occhio di riguardo all'incapsulamento dei dati(per questo è stato utilizzato il module pattern).
+Gli script scritti sono i seguenti:
+\begin{itemize}
+	\item \texttt{mpassword.js}: questo script, utilizzato in cambio-password.cgi, viene utilizzato per la validazione del form per la modifica della password;
+	\item \texttt{register.js}: questo script, utilizzato in registrazione.cgi, viene utilizzato per validare il form per l'inserimento dei dati necessari alla registrazione;
+	\item \texttt{menu.js}: script utilizzato in ogni pagina del sito, serve per attivare l'interfaccia mobile con menu di navigazione a scomparsa, il quale può essere visualizzato o meno cliccando sul pulsante vicino al logo del sito;
+	\item \texttt{formlib.js}: mini libreria utilizzata per fornire agli script mpassword e register di oggetti utili ai loro scopi, aumentandone di fatto la manutenibilità;
+\end{itemize}
+Sono state usate due librerie esterne: la libreria jQuery e il suo plugin jQuery Validation.\\
+
+\paragraph{jQuery}
+jQuery è una libreria JavaScript per applicazioni web. Nasce con l'obiettivo di semplificare la selezione, la manipolazione, la gestione degli eventi e l'animazione di elementi DOM in pagine HTML, nonché implementare funzionalità AJAX. La versione usata nel progetto è la versione minifier.
+
+\paragraph{jQuery Validation}
+jQuery Validation si tratta di un plugin per jQuery che permette di validare i dati inseriti dagli utenti nei form. Si tratta di un plugin leggero e semplice da usare.
+
